@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition for consumption projection'
+define service Zgy_sd_rap_c {
+  expose zgy_c_rap as Professor;
+}

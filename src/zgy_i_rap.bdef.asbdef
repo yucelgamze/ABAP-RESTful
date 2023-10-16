@@ -1,0 +1,28 @@
+managed implementation in class zbp_gy_i_rap unique;
+strict ( 2 );
+
+define behavior for zgy_i_rap alias Proffessor
+persistent table zgy_t_rap_001
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly )  Lastchangeat, Locallastchangedat;
+
+  mapping for zgy_t_rap_001
+    {
+      Id                 = id;
+      Firstname          = firstname;
+      Lastname           = lastname;
+      Age                = age;
+      Role               = role;
+      Salary             = salary;
+      Active             = active;
+      Lastchangeat       = lastchangeat;
+      Locallastchangedat = locallastchangedat;
+    }
+}

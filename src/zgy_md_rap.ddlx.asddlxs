@@ -1,0 +1,57 @@
+@Metadata.layer:#PARTNER
+
+@UI:{ headerInfo:{ typeName:'Professor',
+                   typeNamePlural: 'Professors',
+                   title:{ type: #STANDARD, label: 'Professor', value: 'Id' } }
+}
+annotate view zgy_c_rap with
+{
+  @UI.facet: [{ id:'Professor',
+                purpose:#STANDARD,
+                type:#IDENTIFICATION_REFERENCE,
+                label: 'Professor',
+                position:10 }]
+
+
+  @UI : { lineItem: [{ position: 10, label: 'ID' }],
+        identification: [{ position: 10, label: 'ID' }]
+    }
+  Id;
+  @UI : { lineItem: [{ position: 20, label: 'Firstname' }],
+       identification: [{ position: 20, label: 'Firstname' }]
+   }
+  Firstname;
+  @UI : { lineItem: [{ position: 30, label: 'Lastname' }],
+      identification: [{ position: 30, label: 'Lastname' }]
+  }
+  Lastname;
+  @UI : { lineItem: [{ position: 40, label: 'Age' }],
+     identification: [{ position: 40, label: 'Age' }]
+  }
+  Age;
+  @UI : { lineItem: [{ position: 50, label: 'Role' }],
+    identification: [{ position: 50, label: 'Role' }]
+  }
+  Role;
+  @UI : { lineItem: [{ position: 60, label: 'Salary' }],
+   identification: [{ position: 60, label: 'Salary' }]
+  }
+  Salary;
+
+  @UI : { lineItem: [{ position: 65, label: 'Bonus' }],
+  identification: [{ position: 65, label: 'Bonus' }]
+  }
+  BonusAmount;
+
+  @UI : { lineItem: [{ position: 70, label: 'Active' }],
+  identification: [{ position: 70, label: 'Active' }]
+  }
+  Active;
+  @UI.hidden: true
+  Lastchangeat;
+  @UI.hidden: true
+  Locallastchangedat;
+
+
+
+}
