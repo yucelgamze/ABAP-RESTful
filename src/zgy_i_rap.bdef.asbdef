@@ -1,17 +1,31 @@
 managed implementation in class zbp_gy_i_rap unique;
-strict ( 2 );
+strict ( 1 );
+with draft;
 
-define behavior for zgy_i_rap alias Proffessor
+define behavior for zgy_i_rap alias Professor
 persistent table zgy_t_rap_001
-lock master
+draft table zgy_ddt_001
+lock master total etag Lastchangeat
 authorization master ( instance )
-//etag master <field_name>
+etag master Locallastchangedat
 {
   create;
   update;
   delete;
 
+  field ( numbering : managed, readonly ) Id;
+  field ( readonly ) Active, Salary;
   field ( readonly )  Lastchangeat, Locallastchangedat;
+
+  action ( features : instance ) setActive result [1] $self;
+  determination changeSalary on modify   { field Role; }
+  validation validateAge on save { field Age; create; }
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
 
   mapping for zgy_t_rap_001
     {

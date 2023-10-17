@@ -1,6 +1,11 @@
 @EndUserText.label: 'consumption view entity'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @Metadata.allowExtensions: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
 define root view entity zgy_c_rap
   provider contract transactional_query
   as projection on zgy_i_rap
@@ -28,6 +33,11 @@ define root view entity zgy_c_rap
       @Semantics.systemDateTime.localInstanceLastChangedAt: true
       @EndUserText.label: 'Local Last Change At'
       Locallastchangedat,
+
+
+//    virtual element ile BonusAmount için class oluşturup dinamik ekleme yapmak:
+
+      
       @ObjectModel.virtualElementCalculatedBy: 'ABAP:ZGY_CL_CALCULATE'
       @EndUserText.label: 'Total Pay'
       virtual BonusAmount : abap.int4

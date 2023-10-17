@@ -2,6 +2,7 @@
 
 @UI:{ headerInfo:{ typeName:'Professor',
                    typeNamePlural: 'Professors',
+                   typeImageUrl: 'sap-icon://learning-assistant',
                    title:{ type: #STANDARD, label: 'Professor', value: 'Id' } }
 }
 annotate view zgy_c_rap with
@@ -43,8 +44,10 @@ annotate view zgy_c_rap with
   }
   BonusAmount;
 
-  @UI : { lineItem: [{ position: 70, label: 'Active' }],
-  identification: [{ position: 70, label: 'Active' }]
+  @UI : { lineItem: [{ position: 70, label: 'Active' },
+   { type: #FOR_ACTION, dataAction: 'setActive', label: '💼 Set Active 🪑'  }],
+  identification: [{ position: 70, label: 'Active' },
+   { type: #FOR_ACTION, dataAction: 'setActive', label: '💼 Set Active 🪑'  }]
   }
   Active;
   @UI.hidden: true
