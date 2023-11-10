@@ -13,7 +13,9 @@ ENDCLASS.
 
 
 
-CLASS zgy_cl_calculate IMPLEMENTATION.
+CLASS ZGY_CL_CALCULATE IMPLEMENTATION.
+
+
   METHOD if_sadl_exit_calc_element_read~calculate.
 
     DATA: lt_professorsData TYPE TABLE OF zgy_c_rap WITH DEFAULT KEY.
@@ -38,8 +40,8 @@ CLASS zgy_cl_calculate IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD if_sadl_exit_calc_element_read~get_calculation_info.
 
   ENDMETHOD.
-
 ENDCLASS.

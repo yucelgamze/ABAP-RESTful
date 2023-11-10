@@ -1,5 +1,9 @@
 CLASS zbp_gy_i_rap DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zgy_i_rap.
+protected section.
+private section.
 ENDCLASS.
 
-CLASS zbp_gy_i_rap IMPLEMENTATION.
+
+
+CLASS ZBP_GY_I_RAP IMPLEMENTATION.
 ENDCLASS.
