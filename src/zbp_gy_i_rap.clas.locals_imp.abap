@@ -78,7 +78,7 @@ CLASS lhc_Professor IMPLEMENTATION.
 
   METHOD changeSalary.
 
-    "determination
+    "determination on modify
 
     READ ENTITIES OF zgy_i_rap IN LOCAL MODE
     ENTITY Professor
